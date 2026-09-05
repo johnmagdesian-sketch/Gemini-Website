@@ -3,26 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Modern Landing Page</title>
+    <title>Daily Scripture & Reflection</title>
     <style>
-        /* Global Reset & Styling */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Georgia', serif;
         }
 
         body {
-            color: #333;
-            line-height: 1.6;
-            background-color: #f9f9f9;
+            color: #2c2c2c;
+            line-height: 1.8;
+            background-color: #f7f5f0;
         }
 
-        /* Navigation Bar */
         header {
             background: #ffffff;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
             position: sticky;
             top: 0;
             z-index: 1000;
@@ -34,13 +32,14 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 1rem 2rem;
+            padding: 1.2rem 2rem;
         }
 
         .logo {
-            font-size: 1.5rem;
+            font-size: 1.4rem;
             font-weight: bold;
-            color: #007bff;
+            color: #4a5d4e;
+            letter-spacing: 1px;
         }
 
         .nav-links {
@@ -52,95 +51,110 @@
         .nav-links a {
             text-decoration: none;
             color: #555;
-            font-weight: 600;
+            font-weight: 500;
             transition: color 0.3s;
         }
 
         .nav-links a:hover {
-            color: #007bff;
+            color: #4a5d4e;
         }
 
-        /* Hero Section */
         .hero {
-            background: linear-gradient(135deg, #007bff, #0056b3);
-            color: white;
+            background: linear-gradient(135deg, #4a5d4e, #2c382f);
+            color: #f7f5f0;
             text-align: center;
-            padding: 6rem 2rem;
+            padding: 7rem 2rem;
         }
 
         .hero h1 {
-            font-size: 3rem;
-            margin-bottom: 1rem;
+            font-size: 2.8rem;
+            margin-bottom: 1.5rem;
+            font-weight: normal;
+            letter-spacing: 1px;
         }
 
         .hero p {
-            font-size: 1.2rem;
-            max-width: 600px;
+            font-size: 1.3rem;
+            max-width: 650px;
             margin: 0 auto 2rem auto;
-            opacity: 0.9;
+            font-style: italic;
+            opacity: 0.95;
         }
 
         .btn {
             display: inline-block;
-            background: #ffc107;
-            color: #333;
-            padding: 0.75rem 1.5rem;
-            border-radius: 5px;
+            background: #d4af37;
+            color: #2c2c2c;
+            padding: 0.75rem 2rem;
+            border-radius: 3px;
             text-decoration: none;
             font-weight: bold;
+            letter-spacing: 0.5px;
             transition: background 0.3s;
         }
 
         .btn:hover {
-            background: #e0a800;
+            background: #c19b2e;
         }
 
-        /* Features Section */
         .features {
             max-width: 1100px;
-            margin: 4rem auto;
+            margin: 5rem auto;
             padding: 0 2rem;
             text-align: center;
         }
 
         .features h2 {
-            font-size: 2.2rem;
+            font-size: 2rem;
             margin-bottom: 3rem;
-            color: #222;
+            color: #2c382f;
+            font-weight: normal;
         }
 
         .feature-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
+            gap: 2.5rem;
         }
 
         .feature-card {
             background: white;
-            padding: 2.5rem 2rem;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-            transition: transform 0.3s;
-        }
-
-        .feature-card:hover {
-            transform: translateY(-5px);
+            padding: 3rem 2rem;
+            border-radius: 4px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+            border-top: 4px solid #4a5d4e;
+            text-align: left;
         }
 
         .feature-card h3 {
             margin-bottom: 1rem;
-            color: #007bff;
+            color: #4a5d4e;
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
         }
 
-        /* Contact Section */
+        .feature-card p {
+            font-style: italic;
+            color: #555;
+            font-size: 1.05rem;
+        }
+
         .contact {
             background: #ffffff;
-            padding: 4rem 2rem;
+            padding: 5rem 2rem;
             text-align: center;
-            border-top: 1px solid #eaeaea;
+            border-top: 1px solid #eae5de;
         }
 
         .contact h2 {
+            margin-bottom: 1rem;
+            font-weight: normal;
+            color: #2c382f;
+        }
+
+        .contact p {
+            color: #666;
             margin-bottom: 2rem;
         }
 
@@ -154,10 +168,11 @@
 
         .contact input, .contact textarea {
             width: 100%;
-            padding: 0.75rem;
-            border: 1px solid #ccc;
-            border-radius: 4px;
+            padding: 0.9rem;
+            border: 1px solid #dcd6cd;
+            border-radius: 3px;
             font-size: 1rem;
+            background: #fbf9f6;
         }
 
         .contact textarea {
@@ -168,25 +183,24 @@
         .contact button {
             border: none;
             cursor: pointer;
-            background: #007bff;
+            background: #4a5d4e;
             color: white;
-            padding: 0.75rem;
+            padding: 0.9rem;
             font-size: 1rem;
-            border-radius: 4px;
-            font-weight: bold;
+            border-radius: 3px;
+            letter-spacing: 0.5px;
             transition: background 0.3s;
         }
 
         .contact button:hover {
-            background: #0056b3;
+            background: #37453a;
         }
 
-        /* Footer */
         footer {
-            background: #222;
-            color: white;
+            background: #2c382f;
+            color: #dcd6cd;
             text-align: center;
-            padding: 1.5rem;
+            padding: 2rem;
             font-size: 0.9rem;
         }
     </style>
@@ -195,52 +209,54 @@
 
     <header>
         <div class="nav-container">
-            <div class="logo">BrandName</div>
+            <div class="logo">Verbum</div>
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
-                <li><a href="#features">Features</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#features">Verses</a></li>
+                <li><a href="#contact">Fellowship</a></li>
             </ul>
         </div>
     </header>
 
     <section id="home" class="hero">
-        <h1>Build Your Dream Project Today</h1>
-        <p>We provide clean, responsive, and powerful web templates to jumpstart your business and engage your users.</p>
-        <a href="#contact" class="btn">Get Started</a>
+        <h1>"Your word is a lamp to my feet and a light to my path."</h1>
+        <p>Psalm 119:105</p>
+        <a href="#features" class="btn">Explore Verses</a>
     </section>
 
     <section id="features" class="features">
-        <h2>Why Choose Us</h2>
+        <h2>Daily Pillars of Wisdom</h2>
         <div class="feature-grid">
             <div class="feature-card">
-                <h3>Lightning Fast</h3>
-                <p>Optimized code structure ensures your website loads instantly across all devices.</p>
+                <h3>Strength & Comfort</h3>
+                <p>"So do not fear, for I am with you; do not be dismayed, for I am your God. I will strengthen you and help you; I will uphold you with my righteous right hand." — Isaiah 41:10</p>
             </div>
             <div class="feature-card">
-                <h3>Fully Responsive</h3>
-                <p>Looks and functions seamlessly on mobile phones, tablets, and desktop computers.</p>
+                <h3>Peace & Rest</h3>
+                <p>"Peace I leave with you; my peace I give you. I do not give to you as the world gives. Do not let your hearts be troubled and do not be afraid." — John 14:27</p>
             </div>
             <div class="feature-card">
-                <h3>Modern Design</h3>
-                <p>Crafted with modern UI/UX principles to give your brand a professional edge.</p>
+                <h3>Trust & Guidance</h3>
+                <p>"Trust in the Lord with all your heart and lean not on your own understanding; in all your ways submit to him, and he will make your paths straight." — Proverbs 3:5-6</p>
             </div>
         </div>
     </section>
 
     <section id="contact" class="contact">
-        <h2>Get in Touch</h2>
+        <h2>Request Prayer & Fellowship</h2>
+        <p>Share your intentions with our community so we may lift them up together.</p>
         <form>
             <input type="text" placeholder="Your Name" required>
             <input type="email" placeholder="Your Email" required>
-            <textarea placeholder="Your Message" required></textarea>
-            <button type="submit">Send Message</button>
+            <textarea placeholder="Your Prayer Intention" required></textarea>
+            <button type="submit">Submit Request</button>
         </form>
     </section>
 
     <footer>
-        <p>&copy; 2026 BrandName. All rights reserved.</p>
+        <p>&copy; 2026 Verbum. "The grass withers, the flower fades, but the word of our God will stand forever." (Isaiah 40:8)</p>
     </footer>
 
 </body>
 </html>
+
